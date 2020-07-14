@@ -1,0 +1,15 @@
+<h1><%= @nation_members.count %> results</h1>
+<% @nation_members.each do |member| %>
+  <div class='nation-member'>
+  <h2><%= member.name %></h2>
+  <img src="<%= member.image %>"></img>
+  <h2>Affiliations: <%= member.affiliation %></h2>
+  <h2>Allies: <%= member.allies.each do |ally| %>
+      <%=ally%>
+    <% end %>
+    </h2>
+  <h2>Enemies: <%= member.enemies.each do |enemy| %>
+      <%=enemy%>
+    <%end%></h2>
+  </div>
+<% end %>
